@@ -4,6 +4,8 @@ Requirements: Create a catalog page displaying a selection of shomi assets.  Th
  
 Please use AngularJS and you may use bootstrap for CSS, but please refrain from using any other plugins or libraries.  I've attached the json data you should use in the application.  Please ensure that your code includes at least one service, one controller and one directive.
 
+Note: App boilerplate was taken from  - https://github.com/angular/angular-seed
+
 ## Directory Layout
 
 ```
