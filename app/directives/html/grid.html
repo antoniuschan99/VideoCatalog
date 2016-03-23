@@ -1,9 +1,7 @@
 <div>
-
-    <div class="catalogContainer" ng-mouseenter="hover=true" ng-mouseleave="hover=false" ng-repeat="category in content.categoryList.Data | orderBy: content.selectBy : content.reverse">
+    <div class="catalogContainer" ng-mouseenter="hover=true" ng-mouseleave="hover=false" ng-repeat="category in content.categoryList.Data | orderBy: content.selectBy : content.reverse | limitTo: 20 : content.begin | filter: content.selectedGenre">
 
         <div class="catalogImage" box-art="{{category.Item.Images}}"></div>
-
         <div class="container">
             <div ng-show="hover" class="categoryTitle">{{category.Item.Title}}</div>
             <div ng-show="hover" class="catalogDuration">Duration: {{category.Item.RunTimeSec/60 | number: 0}} Minutes</div>

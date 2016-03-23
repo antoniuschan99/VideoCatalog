@@ -4,6 +4,18 @@
       <li><button ng-click="selectByTitle()">Title</button></li>
       <li><button ng-click="selectByDuration()">Duration</button></li>
       <li><button ng-click="selectByReleaseYear()">Release Year</button></li>
+      <li>
+          <select ng-model="mainModel.selectedGenre">
+              <option style="display:none" value="">Select a Genre</option>
+              <option value="">None</option>
+              <option ng-repeat="genres in mainModel.categoryList.DynamicData.Genres" value="{{genres.Name}}">{{genres.Name}}</option>
+          </select>
+      </li>
+
+      <li>
+          <button ng-click="previous()">Previous</button>
+          <button ng-click="next()">Next</button>
+      </li>
     </ul>
 
     <grid-control content="mainModel"></grid-control>
